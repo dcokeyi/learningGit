@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Your description here">
+    <meta name="author" content="Your Name">
+    <title>Learning jQuery</title>
+	<!-- CSS -->
+    <link href="/css/styles.css" rel="stylesheet" />
+	<!-- jQuery -->
+	<script src="https://code.jquery.com/jquery-3.6.3.min.js" type="text/javascript"></script>
+</head>
+<body>
+    <h1>My email</h1>
+	<p class="prince">My name is Divine</p>
+    <p class="prince">My name is Sukhdeep</p>
+    <p class="prince">My name is Ramasamy</p>
+
+    <a href="www.google.com">Google</a>
+    <p href="www.google.com">Google 2</a></p>
+
+    <ul>
+        <li id="demo">1</li>
+        <li id="demo">2</li>
+        <li id="demo">3</li>
+        <li id="demo">Hello my is Divine</li>
+        <li id="demo">5</li>
+    </ul>
+
+    <h2 style="color:red">Frontend Developer</h2>
+    <!-- <h2 href="www">Web developer</h2> -->
+
+    <div class="flip">Click to slide down panel</div>
+    <div class="panel">Hello Class!</div>
+
+    <button class="hide">Hide</button>
+    <button class="show">Show</button>
+    <button class="tog">FadeToggle</button>
+
+</body>
+</html>
+<script type="text/javascript">
+	$(document).ready(function() {
+        // var example = $(".prince") //classname 
+        // $(example).text("Chnaged name with Jquery")
+
+        // var exampleh1 = $("h1") //element 
+        // console.log(exampleh1)
+
+        // var exampleh1 = $("#demo") //element 
+        // console.log(exampleh1)
+
+        //Attribute based selectors
+        var example = $('[demo-attribute="Google"]')
+        console.log(example)
+
+        // var currentElement = $("li:nth-child(n+4)");
+        // var parent = $("ul")
+        // var index = parent.children().index(currentElement)
+        // console.log(parent.children().index(currentElement));
+
+        // var currentElement = $("h2")
+        // // currentElement.addClass('divine');
+        // currentElement.removeClass('divine');
+
+        // console.log($('h2').attr("style"))
+
+        // $('h2').attr("style", "color:blue");
+
+        // $("h1").click(function() {
+        //     // code i want to excute
+        //     alert("Click")
+        // });
+
+        //Clicked examples
+
+        // $("h1").click(function() {
+        //     //What ever piece of code i have in here is going to excute
+        //     console.log("The h1 has been clicked")
+        // })
+
+        // $(".prince").click(function() {
+        //     console.log("The class has been clicked")
+        // })
+
+        // Hover examples
+        // $("#nardeep").hover(function() {
+        //     //code to excute on hover
+        //     console.log("I hovered over my name is Nardeep")
+        // })
+
+        // MouseOut
+        // $('h1').mouseout(function() {
+        //     //code i want to execute on mouse out
+        //     console.log("You are no longer in the item")
+        // })
+
+        // Dblclick which means double click
+        // $('h1').dblclick(function() {
+        //     //code i want to excute
+        //     console.log("my email has been doubled")
+        // })
+
+        // $('h1').click(function() {
+        //     //code i want to excute
+        //     console.log("my email has been clicked once")
+        // })
+
+        //Delegate
+        // $(document).delegate('button', 'click', function() {
+        //     //code to execute
+        //     console.log('button has been clicked')
+        // })
+
+      
+
+        //one  // $("button").click(function() {
+        //     //code i want to excute
+        //     console.log("my email has been clicked once")
+        // })
+        // $("button").one("click", function() {
+        //     //code i want to excute
+        //     console.log("button can only be clicked once")
+        // })
+
+        //show()
+        // $('h2').show()
+        // $("h2").hide();
+
+        //Toggle
+        // $("button").click(function () {
+        //     // Code i want to execute
+        //     $('h2').toggle();
+        // })
+
+        // fadeOut
+        // FadeOut accepts 2 paramters
+        // fadeOut("slow or fast", function()// optional)
+        // $('.hide').click(function() {
+        //     $('h2').fadeOut('slow')
+        // })
+
+        // //FadeIn
+        // $('.show').click(function() {
+        //     $('h2').fadeIn('slow')
+        // })
+
+        //FadeToggle
+        // FadeToggle accepts 1 paramter slow or fast
+        // fadeToggle("slow")
+
+        // $('.tog').click(function() {
+        //     //code i want to execute
+        //     $('h2').fadeToggle('slow')
+        // })
+
+        //SlideDown take in 1 parameter which is slow or fast
+        // SlideUp takes one parameter which is "slow or fast"
+        // SlideToggle
+        // $('.flip').click(function() {
+        //     //code we want to execute
+        //     $('.panel').slideDown('slow')
+        // })
+
+        // $('.flip').click(function() {
+        //     //code we want to execute
+        //     $('.panel').slideUp('slow')
+        // })
+
+        // SlideToggle takes one parameter which is "slow or fast"
+        $('.flip').click(function(){
+            //code i want to execute
+            $('.panel').slideToggle("fast")
+        })
+
+    // Objects 
+    // Object are mutable 
+
+const person = {
+    firstName: 'John',
+    lastName: 'John',
+    age: 65,
+    country: "Canada",
+    isAlive: true
+}
+
+//Nested Object
+// const persons = {
+//     firstName: 'John',
+//     lastName: 'John',
+//     age: 65,
+//     countries: {
+//         na: 'US',
+//         africa: "nigeria"
+//     },
+//     isAlive: true
+// }
+
+//JSON
+'{"name":"John", "age":30, "car":null}'
+
+// Differences between Object and JSOn
+//1) Jsons do not have variables i.e let person or const person
+//2) The properties of JSON are in string i.e "Firstname"
+//3) JSON are always wrapped in quotes
+
+//1) Object are declared with variables i.e const person
+//2) Properties are not in string
+//3) Objects are not wrapped in quotes
+
+// convert object to JSON
+// console.log(JSON.stringify(person));
+
+// convert JSON to object
+// console.log(JSON.parse('{"name":"John", "age":30, "car":null}'))
+
+//get take in 2 paramters. the parameter is the url i.e https://dummyjson.com/products/1
+// the second paramter the the function which contain the information that is received from the url
+
+// $.get(
+//     'https://dummyjson.com/products/1', //URL
+//     function(data) {//data is the content of what is returned from are http call
+//         console.log(data);
+//     }
+// )
+
+});
+</script>

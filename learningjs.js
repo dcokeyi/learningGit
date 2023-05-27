@@ -114,7 +114,7 @@ let bettyAge = 15;
 // }
 
 // For loop example
-// const countries = ["canada", "usa", "france", "nigeria"]
+const countries = ["canada", "usa", "france", "nigeria"]
 
 // a) The creation of the indexer variable i.e set i = 0;
 // b) The expression to evaluate before each loop.
@@ -189,5 +189,66 @@ const animal = ["dog", 'cat', "rabbit"]
 // accessing an array
 console.log(animal[2])
 const walmart = ["milk", 50, 'bread', 12]
+
+//DOM Manipulation
+//get elemnt with ID
+// const myButton = document.getElementById("button");
+
+// myButton.style.backgroundColor = "red"
+
+// get an element an elemnt by classname
+// const myClass = document.getElementsByClassName("content");
+// console.log(myClass)
+
+// myClass.style.color = "red";
+
+//functions
+// Using the function keyword
+function dayDream() {
+    // the code that will be excuted when the function is clicked or called
+    console.log("active")
+}
+
+// dayDream();
+// Arrow functions
+
+const dream = () => {
+    event.preventDefault();
+    // the code that will be excuted when the function is clicked or called
+    for (let i = 0; i < countries.length; i++) {
+        if (countries[i] == "france") {
+            console.log("france is in the array")
+            break;
+        }
+    }
+}
+
+// const dreamArray = (array) => {
+//     // the code that will be excuted when the function is clicked or called
+//     for (let i = 0; i < array.length; i++) {
+//         if (array[i] == "france") {
+//             console.log("france is in the array")
+//             break;
+//         }
+//     }
+// }
+
+// dreamArray(countries)
+
+// Eventhandling
+// clicking event
+
+// const buttonClick = document.getElementById("button");
+
+// buttonClick.onclick = dream;
+
+
+
+
+
+
+
+
+
 
 
