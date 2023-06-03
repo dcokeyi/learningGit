@@ -212,16 +212,16 @@ function dayDream() {
 // dayDream();
 // Arrow functions
 
-const dream = () => {
-    event.preventDefault();
-    // the code that will be excuted when the function is clicked or called
-    for (let i = 0; i < countries.length; i++) {
-        if (countries[i] == "france") {
-            console.log("france is in the array")
-            break;
-        }
-    }
-}
+// const dream = () => {
+//     event.preventDefault();
+//     // the code that will be excuted when the function is clicked or called
+//     for (let i = 0; i < countries.length; i++) {
+//         if (countries[i] == "france") {
+//             console.log("france is in the array")
+//             break;
+//         }
+//     }
+// }
 
 // const dreamArray = (array) => {
 //     // the code that will be excuted when the function is clicked or called
@@ -243,7 +243,64 @@ const dream = () => {
 // buttonClick.onclick = dream;
 
 
+// Working with API's using Javascript fetch
+// console.log(fetch("https://dummyjson.com/products/1"))
+// fetch("https://dummyjson.com/products/1")
+//     .then(response => response.json())
+//     .then(data => console.log(data))
+//     .catch(error => console.log(error))
 
+
+// Local Storage
+// fetch("https://dummyjson.com/products/1")
+//     .then(response => response.json())
+//     // First param is a key and the second is the obj we want to store.
+//     .then(data => localStorage.setItem("1", JSON.stringify(data)))
+//     .catch(error => console.log(error))
+
+// Local storage retrieve
+// let info = localStorage.getItem("1")
+// console.log(info)
+
+// LocalStorage and Cache are both web storage mechanisms in browsers, but they serve different purposes:
+
+// LocalStorage provides a larger storage capacity and persistent storage, while Cache offers temporary storage for caching network requests and responses. The choice between them depends on the specific use case and data storage requirements of your application.
+
+// Session Storage
+// fetch("https://dummyjson.com/products/1")
+//     .then(response => response.json())
+//     // First param is a key and the second is the obj we want to store.
+//     .then(data => sessionStorage.setItem("1", JSON.stringify(data)))
+//     .catch(error => console.log(error))
+
+// let infoSession = sessionStorage.getItem("1")
+// console.log(infoSession)
+
+// Difference between local and session storage
+
+// LocalStorage provides persistent storage that is shared across all tabs and windows, while SessionStorage offers session-specific storage that is limited to a single tab or window. The choice between them depends on your specific requirements for data persistence and scoping within your web application.
+
+// Map function
+// fetch("https://dummyjson.com/products/")
+//     .then(response => response.json())
+//     // First param is a key and the second is the obj we want to store.
+//     .then(data => localStorage.setItem("1", JSON.stringify(data)))
+//     .catch(error => console.log(error))
+
+// let info = localStorage.getItem("1")
+// let items = JSON.parse(info)
+// console.log(items)
+
+// destructure out products
+// const { products } = items
+// console.log(products)
+
+// For loop
+// for (let i = 0; i <= products.length; i++) {
+//     console.log(products[i].brand)
+// }
+
+// const productsMaps = products.map(product => console.log(product.brand))
 
 
 

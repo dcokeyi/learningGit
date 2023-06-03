@@ -14,6 +14,9 @@
 </head>
 <body>
     <h1>My email</h1>
+    <p class="json"> Description</p>
+    <img src="">
+
 	<p class="prince">My name is Divine</p>
     <p class="prince">My name is Sukhdeep</p>
     <p class="prince">My name is Ramasamy</p>
@@ -53,16 +56,20 @@
         // console.log(exampleh1)
 
         //Attribute based selectors
-        var example = $('[demo-attribute="Google"]')
-        console.log(example)
+        // var example = $('[demo-attribute="Google"]')
+        // console.log(example)
 
         // var currentElement = $("li:nth-child(n+4)");
         // var parent = $("ul")
         // var index = parent.children().index(currentElement)
         // console.log(parent.children().index(currentElement));
 
-        // var currentElement = $("h2")
-        // // currentElement.addClass('divine');
+        // Finding an item by its position
+        // console.log(parent.children().get(index));
+
+        // var currentElement = $("#demo")
+        // currentElement.addClass('divine');
+
         // currentElement.removeClass('divine');
 
         // console.log($('h2').attr("style"))
@@ -86,7 +93,7 @@
         // })
 
         // Hover examples
-        // $("#nardeep").hover(function() {
+        // $("#demo").hover(function() {
         //     //code to excute on hover
         //     console.log("I hovered over my name is Nardeep")
         // })
@@ -111,12 +118,12 @@
         //Delegate
         // $(document).delegate('button', 'click', function() {
         //     //code to execute
-        //     console.log('button has been clicked')
+        //     console.log('a button has been clicked')
         // })
 
       
 
-        //one  // $("button").click(function() {
+        // one  // $("button").click(function() {
         //     //code i want to excute
         //     console.log("my email has been clicked once")
         // })
@@ -130,7 +137,7 @@
         // $("h2").hide();
 
         //Toggle
-        // $("button").click(function () {
+        // $(".hide").click(function () {
         //     // Code i want to execute
         //     $('h2').toggle();
         // })
@@ -221,10 +228,27 @@ const person = {
 
 // $.get(
 //     'https://dummyjson.com/products/1', //URL
-//     function(data) {//data is the content of what is returned from are http call
+//     function(data) {
+//     // data is the content of what is returned from are http call
 //         console.log(data);
 //     }
 // )
+
+$.getJSON(
+    'https://dummyjson.com/products/1', //URL
+    function(data) {
+        console.log(data)
+    // data is the content of what is returned from are http call
+    $("h1").text(data.title)
+    $(".json").text(data.description)
+    $('img').attr("src", data.thumbnail);
+    }
+)
+// $('li').each(function() {
+//     $(this).addClass("Testing")
+//     var currentElement = $("li:nth-child(n+4)");
+//     currentElement.addClass('divine');
+// })
 
 });
 </script>
