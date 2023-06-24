@@ -45,7 +45,7 @@ const HelloWorld = (props) => {
         setIsShowing(!isShowing)
     }
 
-    console.log(isShowing)
+    // console.log(isShowing)
 
     // and &&
     // or ||
