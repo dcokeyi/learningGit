@@ -10,8 +10,9 @@ const List = () => {
 
     useEffect(() => {
         axios.get('https://dummyjson.com/products')
-            .then(res => setItems(res.data.products))
-            .then(console.log(items))
+            .then(res => console.log(res))
+            // .then(res => setItems(res.data.products))
+            // .then(console.log(items))
             .catch(error => console.log(error))
     }, [])
 
